@@ -1,8 +1,8 @@
 package BinarySearch;
 
 import java.util.Arrays;
-
-public class LeetCode34 {
+// LeetCode 34
+public class First_Last_occurrence {
     public static void main(String[] args) {
         int [] arr={1,3,3,3,7,9};
         int tar=3;
