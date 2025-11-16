@@ -51,7 +51,7 @@ class Testing {
             if(nums[index]!=index){
                 return index;
             }
-        }z
+        }
         return nums.length;
     }
     static void swap(int[] nums, int e, int f){
