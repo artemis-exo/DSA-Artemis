@@ -13,6 +13,8 @@ public class BinaryTree {
         System.out.println();
         System.out.print("This is Postorder ");
         postorder(root);
+        System.out.println();
+        System.out.print("Height of Tree is : "+Height(root));
     }
     static Node5 create(){
         Node5 root=null;
@@ -22,8 +24,8 @@ public class BinaryTree {
             return null;
         root=new Node5(val);
         System.out.println("Enter left tree data");
-
         root.left=create();
+
         System.out.println("Enter right tree data");
         root.right=create();
         return  root;
@@ -48,6 +50,14 @@ public class BinaryTree {
         inorder(root.left);
         inorder(root.right);
         System.out.print(root.val+ "->");
+    }
+
+    static int Height(Node5 root){
+        if(root==null)
+            return 0;
+        int LH=Height(root.left);
+        int RH=Height(root.right);
+        return Math.max(LH,RH)+1;
     }
 }
 class Node5{
