@@ -2,15 +2,15 @@ package BinaryTrees;
 
 public class HeightBinaryTree {
     public static void main(String[] args) {
-        Node root=new Node(1);
-        root.left=new Node(2);
-        root.right=new Node(3);
-        root.left.left=new Node(4);
-        root.left.right=new Node(5);
+        Node3 root=new Node3(1);
+        root.left=new Node3(2);
+        root.right=new Node3(3);
+        root.left.left=new Node3(4);
+        root.left.right=new Node3(5);
 
         System.out.println("Height of Binary tree :" + Height(root));
     }
-    static int Height(Node root){
+    static int Height(Node3 root){
         if(root==null)
             return 0;
         int LH=Height(root.left);
