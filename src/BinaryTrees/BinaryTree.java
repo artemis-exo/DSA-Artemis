@@ -5,10 +5,13 @@ public class BinaryTree {
     public static void main(String[] args) {
         sc=new Scanner(System.in);
         Node5 root=create();
+        System.out.print("This is Inorder ");
         inorder(root);
         System.out.println();
+        System.out.print("This is Preorder ");
         preorder(root);
         System.out.println();
+        System.out.print("This is Postorder ");
         postorder(root);
     }
     static Node5 create(){
