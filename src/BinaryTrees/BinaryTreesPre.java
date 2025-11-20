@@ -19,7 +19,7 @@ public class BinaryTreesPre {
         preorder(root.right);
     }
 }
-class Node{
+class Node {
     int val;
     Node left,right;
 
