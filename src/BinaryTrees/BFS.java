@@ -2,7 +2,7 @@ package BinaryTrees;
 
 public class BFS {
     int vert;
-     int [][] matrix;
+    int [][] matrix;
      int [] queue;
       int front =0;
       int rear=-1;
