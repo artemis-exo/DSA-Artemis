@@ -2,7 +2,7 @@ package BinaryTrees;
 import java.util.Scanner;
 public class BinaryTree {
     static Scanner sc=null;
-    public static void main(String[] args) {
+    public static void main(String [] args) {
         sc=new Scanner(System.in);
         Node5 root=create();
         System.out.print("This is Inorder ");
