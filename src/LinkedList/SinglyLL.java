@@ -70,6 +70,61 @@ public class SinglyLL {
         // increment size
         size++;
     }
+
+    // Searching
+    public boolean search(int target){
+        Node temp=head;
+        while(temp!=null){
+           if(temp.val==target){
+               return true;
+           }
+           else{
+               temp=temp.next;
+           }
+        }
+        return false;
+    }
+
+    // Returns position according to 1- based indexing
+    public int findPosition(int target){
+        Node temp=head;
+        int cnt=1;
+        while(temp!=null){
+            if(temp.val==target){
+                return cnt;
+            }
+            cnt++;
+            temp=temp.next;
+        }
+        return -1;
+    }
+
+    // Update using position
+    public void UpdateAtPosition(int posi, int newData){
+        if(posi<0 || posi>size+1){
+            System.out.println("Position Not Possible");
+        }
+        Node temp=head;
+        int cnt=1;
+        while(temp!=null){
+            if(cnt==posi){
+                temp.val=newData;
+            }
+            cnt++;
+            temp=temp.next;
+        }
+    }
+    public boolean updateValue(int oldVal, int newVal){
+        Node temp=head;
+        while(temp!=null){
+            if(temp.val==oldVal){
+                temp.val=newVal;
+                return true;
+            }
+            temp=temp.next;
+        }
+        return false;
+    }
     public void print(){
         Node temp = head;
         while(temp!=null){
@@ -118,6 +173,15 @@ public class SinglyLL {
         System.out.println("Size of LL "+sll.getSize());
         System.out.println("Head of LL "+sll.getHead());
         System.out.println("Tail of LL "+sll.getTail());
+
+        // Searching
+        System.out.println("Found or not --> "+sll.search(6));
+        System.out.println("Position of 1 --> "+sll.findPosition(1));
+        sll.UpdateAtPosition(3,14);
+        sll.print();
+        System.out.println("Update or Not : "+sll.updateValue(14,1));
+        sll.print();
+
 
     }
 }
