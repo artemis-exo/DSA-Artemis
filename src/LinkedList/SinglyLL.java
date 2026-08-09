@@ -125,6 +125,41 @@ public class SinglyLL {
         }
         return false;
     }
+    // Delete Head
+    public void deleteHead(){
+        if(head==null){
+            System.out.println("Empty List");
+            return;
+        }
+        head=head.next;
+        size--;
+        // be cautious --> check whether after deletion LL has become empty or not
+        if(head==null){
+            tail=null;
+        }
+    }
+    // Delete At tail
+    public void deleteTail(){
+        if(head==null &&tail==null){
+            System.out.println("Empty List");
+            return;
+        }
+        // check for single Node
+        if(head==tail){
+            head=null;
+            tail=null;
+            size=0;
+            return;
+        }
+        // for normal --> length wali LL
+        Node temp=head;
+        while(temp.next.next!=null){
+            temp=temp.next;
+        }
+        temp.next=null;
+        tail=temp;
+        size--;
+    }
     public void print(){
         Node temp = head;
         while(temp!=null){
@@ -181,6 +216,16 @@ public class SinglyLL {
         sll.print();
         System.out.println("Update or Not : "+sll.updateValue(14,1));
         sll.print();
+        System.out.println("Yahn se Deletion");
+        sll.insertAtHead(101);
+        sll.print();
+        sll.deleteHead();
+        sll.print();
+        sll.insertAtTail(64);
+        sll.print();
+        sll.deleteTail();
+        sll.print();
+
 
 
     }
