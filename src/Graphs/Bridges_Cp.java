@@ -21,6 +21,10 @@ Bridge detection: low[to] > tin[v] condition is identical.
 Parent skipping: Preserved with parentSkipped flag.
 
 IS_BRIDGE: Currently prints bridges; you can replace with custom logic.
+
+
+
+*** Can be Done Only Using DFS
  */
 
 import java.util.*;
